@@ -1,3 +1,10 @@
+ =======================================================================================================================================
+ Autor: Paulo H A Moreira...
+ github.com/pouleth0
+ Obs: Manter divulgar. (sem restrições-manter gratificações do Developer: não e crime; omitir créditos para o autor original, se torna
+ plagio, não e crime, e vergonhoso...=)
+ =======================================================================================================================================
+ 
 # Cap_PDF_kindle_Estudo
 Este Processo e Apenas para estudo de como capturar Screen, Apenas para estudo de métodos usando Java.
 Programa para Capturar Screen, estudo de  processos simples em capturar algo apenas usando Screen-Print.
