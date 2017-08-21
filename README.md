@@ -5,6 +5,8 @@ Obs: Manter divulgar. (sem restrições-manter gratificações do Developer: nã
 Omitir créditos para o autor original, sé torna plagio, é vergonhoso...=)
 
  
+ E-Books-PDF.jar   < Diretorio principal para Download.>
+ 
 # Cap_PDF_kindle_Estudo
 Este Processo e Apenas para estudo de como capturar Screen, Apenas para estudo de métodos usando Java.
 Programa para Capturar Screen, estudo de  processos simples em capturar algo apenas usando Screen-Print.
