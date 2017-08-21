@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="496.0" prefWidth="149.0" styleClass="cardPainel" stylesheets="@../Styles-CSS/application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Principal.Menu">
+   <children>
+      <JFXButton layoutY="181.0" prefHeight="44.0" prefWidth="149.0">
+         <styleClass>
+            <String fx:value="cursoCLOSED_HAND" />
+            <String fx:value="RadioButton" />
+         </styleClass>
+      </JFXButton>
+      <JFXButton layoutY="248.0" prefHeight="44.0" prefWidth="149.0">
+         <styleClass>
+            <String fx:value="cursoCLOSED_HAND" />
+            <String fx:value="RadioButton" />
+         </styleClass>
+      </JFXButton>
+      <JFXButton layoutY="309.0" prefHeight="44.0" prefWidth="149.0">
+         <styleClass>
+            <String fx:value="RadioButton" />
+            <String fx:value="cursoCLOSED_HAND" />
+         </styleClass>
+      </JFXButton>
+      <JFXButton layoutY="375.0" prefHeight="44.0" prefWidth="149.0">
+         <styleClass>
+            <String fx:value="RadioButton" />
+            <String fx:value="cursoCLOSED_HAND" />
+         </styleClass>
+      </JFXButton>
+      <JFXButton layoutY="438.0" prefHeight="44.0" prefWidth="149.0">
+         <styleClass>
+            <String fx:value="RadioButton" />
+            <String fx:value="cursoCLOSED_HAND" />
+         </styleClass>
+      </JFXButton>
+   </children>
+</AnchorPane>
