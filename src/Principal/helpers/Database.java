@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Principal.helpers;
+package sample.helpers;
 
 /**
  *
  * @author danml
  */
 public class Database {
-
+    
 }

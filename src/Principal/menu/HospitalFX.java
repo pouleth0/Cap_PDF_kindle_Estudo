@@ -1,4 +1,4 @@
-package Principal.menu;
+package sample.menu;
 
 import com.jfoenix.controls.JFXDecorator;
 import javafx.application.Application;
@@ -17,7 +17,7 @@ public class HospitalFX extends Application{
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource(Routes.LOGIN));
+        Parent root = FXMLLoader.load(getClass().getResource(Routes.LOGINVIEW));
         JFXDecorator decorator=new JFXDecorator(primaryStage, root, false, false, true);
         decorator.setCustomMaximize(false);
         decorator.setBorder(Border.EMPTY);

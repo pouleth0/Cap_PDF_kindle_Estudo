@@ -7,13 +7,12 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="674.0" prefWidth="986.0" stylesheets="@../Styles-CSS/Estilo.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="Principal.MainBookContr">
+<AnchorPane prefHeight="674.0" prefWidth="986.0" stylesheets="@../Styles-CSS/Estilo.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Principal.MainAcessRootEbooks">
    <children>
-      <JFXToolbar prefHeight="40.0" prefWidth="1391.0"><center>
+      <JFXToolbar prefHeight="48.0" prefWidth="1391.0" styleClass="blue-btn"><center>
       <Label fx:id="lblTitle" alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="23.0" prefWidth="810.0" BorderPane.alignment="CENTER" /></center></JFXToolbar>
-      <AnchorPane fx:id="PrincipalPane" layoutX="191.0" layoutY="30.0" prefHeight="644.0" prefWidth="1200.0" />
-      <JFXDrawer fx:id="drawerMenu" layoutY="33.0" prefHeight="635.0" prefWidth="193.0" />
-      <JFXHamburger fx:id="menuHamb" layoutX="12.0" layoutY="4.0" onMouseClicked="#menuclick" prefHeight="30.0" prefWidth="30.0" />
+      <JFXDrawer fx:id="drawerLoadWeb" defaultDrawerSize="190.0" layoutX="193.0" layoutY="52.0" prefHeight="612.0" prefWidth="1191.0" />
+      <JFXDrawer fx:id="drawerMenu" defaultDrawerSize="190.0" layoutY="48.0" prefHeight="620.0" prefWidth="193.0" />
+      <JFXHamburger fx:id="menuHamb" layoutX="12.0" layoutY="7.0" onMouseClicked="#menuclick" prefHeight="30.0" prefWidth="30.0" />
    </children>
 </AnchorPane>

@@ -6,20 +6,23 @@
    * Created on : Jul 31, 2017, 9:32:04 AM
    * Author     : kn0w */
 package Principal;
+import Principal.helpers.Routes;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-import Principal.helpers.Routes;
+
+import java.net.URL;
+import java.util.ResourceBundle;
 
 public class Main extends Application {
     @Override
     public void start(Stage rootStage) throws Exception{
-
-        Parent rootFXML = FXMLLoader.load(getClass().getResource(Routes.LOGIN));
+      Parent rootFXML = FXMLLoader.load(getClass().getResource(Routes.LOGINVIEW));
         Scene sceneRoot = new Scene(rootFXML);
         sceneRoot.setFill(Color.TRANSPARENT);
         //sceneRoot = new Scene(rootFXML);
@@ -32,4 +35,5 @@ public class Main extends Application {
         launch(args);
     }
     public void closePrincipal(){    }
+
 }

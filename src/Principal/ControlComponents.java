@@ -9,10 +9,10 @@
 */
 package Principal;
 
-import Principal.Main;
-import Principal.MainBookContr;
+import Principal.helpers.Routes;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
@@ -20,15 +20,13 @@ import javafx.scene.input.InputMethodEvent;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
-
-import javax.swing.*;
 public class ControlComponents {
 
     public String URL=null;
     public static final String DEST = null;
     private static String name = null;
     private static String pass = null;
-
+    private static Stage newStage;
     public Button btLogar;
     public Button buttclose;
 
@@ -44,7 +42,6 @@ public class ControlComponents {
     private PasswordField txtFildPass;
     @FXML
     private Label lbltext;
-
     @FXML
     private void urlKindl(MouseEvent event) {
         rtButtKindl3.setSelected(true);
@@ -57,7 +54,6 @@ public class ControlComponents {
     }
     @FXML
     private void urloutros(MouseEvent event) {
-
         rtButtFaes4.setSelected(true);
         veriFicaEVENTO("outros");
     }
@@ -81,8 +77,14 @@ public class ControlComponents {
     private void LoginButt(ActionEvent event) throws Exception {
         Stage stageCloseOf = (Stage) buttclose.getScene().getWindow();
         stageCloseOf.close();
-        MainBookContr mainBooks = new MainBookContr();
-        mainBooks.main(null);
+        System.out.println("Denstor do Costrutor RootBooks...2");
+        Stage newStage = new Stage();
+        Parent rootPDFLoad = FXMLLoader.load(getClass().getResource(Routes.MAINVIEW));
+        Scene rootScenePDF = new Scene(rootPDFLoad);
+        //rootScenePDF.setFill(Color.TRANSPARENT);
+        newStage.setScene(rootScenePDF);
+        newStage.show();
+
         System.out.println("Button Login ok");
     }
     public void veriFicaEVENTO(String ex) {
@@ -94,10 +96,10 @@ public class ControlComponents {
                         System.out.println("selecionado Kindle = "+rtButtKindl3.isSelected());
                         System.out.println("Faesa = "+rtButtFaes4.isSelected());
                     System.out.println("Google = "+rtButtGoogl3.isSelected());
-                    MainBookContr.setKindl3(true);
-                MainBookContr.setGoogl3(false);
-                MainBookContr.setOutros(false);
-                MainBookContr.setURL("http://read.amazon.com");
+                    MainAcessRootEbooks.setKindl3(true);
+                MainAcessRootEbooks.setGoogl3(false);
+                MainAcessRootEbooks.setOutros(false);
+                MainAcessRootEbooks.setURL("http://read.amazon.com");
                 break;
             case "google":
                 rtButtFaes4.setSelected(false);
@@ -105,10 +107,10 @@ public class ControlComponents {
                         System.out.println("selecionado google = "+rtButtGoogl3.isSelected());
                         System.out.println("Kindle = "+rtButtKindl3.isSelected());
                     System.out.println("Faesa = "+rtButtFaes4.isSelected());
-                    MainBookContr.setGoogl3(true);
-                MainBookContr.setKindl3(false);
-                MainBookContr.setOutros(false);
-                MainBookContr.setURL("https://books.google.com.br/bkshp?hl=pt-BR&tab=wp");
+                    MainAcessRootEbooks.setGoogl3(true);
+                MainAcessRootEbooks.setKindl3(false);
+                MainAcessRootEbooks.setOutros(false);
+                MainAcessRootEbooks.setURL("https://books.google.com.br/bkshp?hl=pt-BR&tab=wp");
                 break;
             case "outros":
                 rtButtGoogl3.setSelected(false);
@@ -116,22 +118,20 @@ public class ControlComponents {
                         System.out.println("selecionado faesa = "+rtButtFaes4.isSelected());
                         System.out.println("google = "+rtButtGoogl3.isSelected());
                     System.out.println("Kindle = "+rtButtKindl3.isSelected());
-                    MainBookContr.setOutros(true);
-                MainBookContr.setKindl3(false);
-                MainBookContr.setGoogl3(false);
-                MainBookContr.setURL("http://biblioteca.faesa.br/biblioteca/index.php");
+                    MainAcessRootEbooks.setOutros(true);
+                MainAcessRootEbooks.setKindl3(false);
+                MainAcessRootEbooks.setGoogl3(false);
+                MainAcessRootEbooks.setURL("http://biblioteca.faesa.br/biblioteca/index.php");
                 break;
         }
     }
     public void UserLog(KeyEvent keyEvent) {
         ControlComponents.setName(this.getTxtFildUser().getText());
         System.out.println(" o user name:"+this.getTxtFildUser().getText());
-        MainBookContr.setName(this.getTxtFildUser().getText());
     }
     public void PasswLog(KeyEvent inputMethodEvent) {
         ControlComponents.setPass(this.getTxtFildPass().getText());
         System.out.println("O pass: "+this.getTxtFildPass().getText());
-        MainBookContr.setPass(this.getTxtFildPass().getText());
     }
     public String getURL() {
         return URL;
@@ -181,18 +181,14 @@ public class ControlComponents {
     public void setTxtFildPass(PasswordField txtFildPass) {
         this.txtFildPass = txtFildPass;
     }
-
     public void PassLog(InputMethodEvent inputMethodEvent) {
     }
-
     public void logOut(ActionEvent actionEvent) {
     }
-
     public void exit(ActionEvent actionEvent) {
     }
       /* * new Thread(() -> {
          *   this.lbltext.setText(txtFildUser.getText());
          *   lbltext.setText(txtFildUser.getText());
          * }).start(); */
-
 }

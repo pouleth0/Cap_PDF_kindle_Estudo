@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Principal.menu;
+package sample.menu;
 
 import com.jfoenix.controls.JFXButton;
-
+import com.sun.java.swing.plaf.windows.resources.windows;
 import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
@@ -16,7 +16,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.stage.Stage;
-
+import sample.menu.HospitalFX;
 
 /**
  * FXML Controller class
@@ -44,7 +44,7 @@ public class DrawerController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }
+    }    
 
     @FXML
     private void logOut(ActionEvent event) {
@@ -56,12 +56,12 @@ public class DrawerController implements Initializable {
         } catch (Exception ex) {
             Logger.getLogger(DrawerController.class.getName()).log(Level.SEVERE, null, ex);
         }
-
+        
     }
 
     @FXML
     private void exit(ActionEvent event) {
         Platform.exit();
     }
-
+    
 }

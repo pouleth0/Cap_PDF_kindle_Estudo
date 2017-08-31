@@ -9,6 +9,10 @@
 */
 .root{
     -fx-background-radius: 8px;
+
+}
+.vboxtransparente{
+    -fx-background-color: transparent;
 }
 .RadioButton{
     -fx-background-radius: 8px;
